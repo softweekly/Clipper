@@ -1,0 +1,22 @@
+[package]
+name = "app"
+version = "0.1.0"
+description = "Clipper AI Video Editor"
+authors = ["you"]
+license = "MIT"
+repository = ""
+edition = "2021"
+rust-version = "1.70"
+
+[build-dependencies]
+tauri-build = "2.0.0"
+
+[dependencies]
+tauri = { version = "2.0.0", features = [] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1", features = ["full"] }
+
+[features]
+custom-protocol = [ "tauri/custom-protocol" ]
